@@ -1,11 +1,7 @@
 public class AssaultTerminator extends SpaceMarine {
-
-    protected String name;
-
-    protected AssaultTerminator(String name) {
+    public AssaultTerminator(String name) {
         super(name, 150, 30);
-        this.name = name;
-        System.out.println(this.name + " has teleported from space.");
+        System.out.println(name + " has teleported from space.");
         super.equip(new PowerFist());
     }
 

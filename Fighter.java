@@ -8,6 +8,8 @@ public interface Fighter {
 
     public boolean moveCloseTo(Fighter fighter);
 
+    public void recoverAP();
+
     public String getName();
 
     public int getAp();

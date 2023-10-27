@@ -49,10 +49,21 @@ public abstract class SpaceMarine extends Unit {
     }
 
     @Override
+    public boolean moveCloseTo(Fighter fighter) {
+        if (this == fighter || fighter == null) {
+            return false;
+        } else if (this.weapon != null && this.weapon.isMelee()) {
+            return super.moveCloseTo(fighter);
+        } else {
+            return false;
+        }
+    }
+
+    @Override
     public void recoverAP() {
-        ap += 9;
-        if (ap > 50) {
-            ap = 50;
+        this.ap += 9;
+        if (this.ap > 50) {
+            this.ap = 50;
         }
     }
 }

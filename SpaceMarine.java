@@ -12,16 +12,20 @@ public abstract class SpaceMarine extends Unit {
 
     @Override
     public boolean equip(Weapon weapon) {
-        if (weapon == null) {
+        if (weapon == null || weapon.isEquipped) {
             return false;
         }
-        if (this.weapon == weapon) {
-            return false;
+
+        if (this.weapon != null) {
+            this.weapon.isEquipped = false;
         }
+
+        System.out.println(getName() + " has been equipped with a " + weapon.getName() + ".");
         this.weapon = weapon;
-        System.out.println(this.name + " has been equipped with a " + weapon.getName());
+        weapon.isEquipped = true;
         return true;
     }
+
 
     @Override
     public boolean attack(Fighter fighter) {

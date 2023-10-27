@@ -2,9 +2,8 @@ public abstract class SpaceMarine extends Unit {
 
     protected Weapon weapon = null;
 
-    protected SpaceMarine(String name, int hp, int damage, Weapon weapon) {
+    protected SpaceMarine(String name, int hp, int damage) {
         super(name, hp, damage);
-        this.equip(weapon);
     }
 
     public Weapon getWeapon() {

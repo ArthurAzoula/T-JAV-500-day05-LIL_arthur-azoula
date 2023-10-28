@@ -5,6 +5,7 @@ public class SuperMutant extends Monster {
     public SuperMutant() {
         super("SuperMutant #" + id, 170, 20);
         this.damage = 60;
+        this.apcost = 20;
         id++;
         System.out.println(this.name + ": Roaarrr!");
     }
